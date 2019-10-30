@@ -33,7 +33,7 @@ if [ ! -d $CACHE_DIR/redis_$VERSION ]; then
 	echo "Fetching and installing redis" | indent
 	cd $REDIS_BUILD
 	curl -OL "http://download.redis.io/releases/redis-$VERSION.tar.gz"
-	tar zxvf "redis-$VERSION.tar.gz"
+	tar zxf "redis-$VERSION.tar.gz"
 	cd "redis-$VERSION"
 	make
 	make PREFIX=$CACHE_DIR/redis_$VERSION/ install
